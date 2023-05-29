@@ -83,7 +83,6 @@ ul {
 .global-header {
   padding: 24px 215px;
   border-bottom: 1px solid #ececec;
-  width: 1600px;
   margin: 0 auto;
 }
 .logo-header {
@@ -149,23 +148,20 @@ ul {
   margin-right: 10px;
   fill: #757575;
 }
-a.link::after {
-  display: none;
+a.active {
   position: relative;
+}
+a.active::after {
+  display: block;
+  position: absolute;
   content: "";
   background: var(--link-active-color);
   border-radius: 2px;
   width: 100%;
   height: 3px;
-  bottom: -28px;
+  bottom: -30;
   left: 0;
 }
-a.link:hover::after,
-a.link:focus::after {
-  display: block;
-  transition: transform var(--transition);
-}
-
 .header-contact-email a:hover,
 .header-contact-email a:focus,
 .header-contact-phone a:hover,
@@ -203,22 +199,6 @@ a.link:focus::after {
   letter-spacing: 0.06em;
   color: var(--btn-text-color);
   cursor: pointer;
-}
-.button-index:hover,
-.button-index:focus {
-  color: var(--text-color);
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  border: 0;
-  cursor: pointer;
-  background-color: var(--link-active-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  transition: transform var(--transition);
 }
 
 /*Main text section + What we do section*/
